@@ -6,24 +6,23 @@
     margin: 0;
 }
 
-:root {
+:root {  /* I "root"-elementet deklarerar jag olika variabler med färger som förekommer ofta och på så sätt kan jag enkelt hämta rätt färg med funktionen "var()"  */
     --backgroundColorWhite: #ffffff;
     --backgroundColorGray: #F3F6FF;
     --color-headline-text: #0B0F19;
     --color-paragraph-text: #565973;
     --color-nav-btn: #6366F1;
     --color-text-navbtn: #ffffff;
-    --color-dark-mode-text: #565973;
     --color-switch-btn: #9397AD;
     --color-nav-btn-hover: linear-gradient(90deg, rgb(99, 102, 241) 0% ,rgb(139, 92, 246) 50% ,rgb(217, 70, 239) 100%);
-    
+    --color-download-btn-text: #ffffff;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-body {
+body {      /* Body-element för att samla alla egenskaper ( properties ) och dess värde. */
     font-size: 16px;
     font-weight: 400;
     font-style: normal;
@@ -42,19 +41,18 @@ img {
     width: 100%;
     height: auto;
 }
-.container {
+
+.container { /* Elementet container finns med i varje sektion för att "styra" bredden på min webbsida. */
     width: 100%;
     max-width: 1320px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 1rem;
     padding-right: 1rem;
-
 }
 
-header {
-    
-    display: grid;
+header { /* För varje sektion skapar jag en "wrapper" i HTML och här skapar jag ett Element där jag bestämmer värdet på de olika egenskaperna för varje sektion. T.ex. höjd och bakgrundsfärg mm. */
+    display: grid; /* Använder Grid för att placera de olika objekten i min header. */
     position: fixed;
     z-index: 1;
     height: 76px;
@@ -64,7 +62,7 @@ header {
     opacity: 1.0;
     align-items: center;
     grid-template-columns: 3fr 0.25fr 0.15fr 1fr;
-    
+   
     .header-content {
         display: flex;
         justify-content: space-between;
@@ -77,19 +75,23 @@ header {
             gap: 2rem;
 
             .darkmode-text{
-                color: var(--color-dark-mode-text);
+                margin-right: -27px;
+                font-weight: 600;
+                font-size: 16px;
+                font-family: manrope;
+                color: var(--color-paragraph-text);
             }
 
             .switch {
+                margin-right: -14px;
                 margin-top: 1.5rem;
-                
             }
 
         }
     }
 }
 
-button, .btn {
+button, .btn {  /* Element med egenskaper för knappar på webbsidan. Den här sätter min "grundinställning" men har även skapat separata element för knapparna till App Store och Google Play p.g.a annan design. */
     
     color:var(--color-text-navbtn);
     background-color: var(--color-nav-btn);
@@ -97,7 +99,7 @@ button, .btn {
     align-items: center;
     justify-content: space-between; 
     gap: 9px;
-    padding: 10px 20px;
+    padding: 5px 20px;
     border-radius: 4px;
     text-decoration: none;
     gap: 8;
@@ -105,6 +107,7 @@ button, .btn {
     img {
         height: 100%;
         width: auto;
+        margin-left: -10px;
     }
     
     &:hover {
@@ -113,29 +116,28 @@ button, .btn {
 
 }
 
-.hero {
+
+.hero { 
 
     min-height: 876px;
     max-height: 876px;
     background: #F1F4FD;
-    background: linear-gradient(170deg,rgb(99, 101, 241,0.1) 0% ,rgb(218, 70, 239,0.05) 42%, rgb(241, 244, 253,0.07) 83%);
-    padding: 0%;
+    background:  radial-gradient(at bottom, rgba(99, 101, 241, 10%) 0%, rgba(219, 70, 239, 5%) 42%, rgba(241, 244, 253, 7%) 83%);
     
-
-    .hero-content {
+    .hero-content { /* Skapar en "box" för allt innehåll i Hero-sektionen. */
         display: grid;
         grid-template-columns: 1fr auto;
         grid-template-rows: 1fr;
         margin-left: 40px;
-        
 
         .hero-text {
 
-            margin-top: 217px;
+            margin-top: 193px;
 
             h1 {
             line-height: 125%;
             font-size: 56px;  
+            font-weight: 800;
             color: #0B0F19;
             margin-bottom: 0%;
             }
@@ -145,17 +147,46 @@ button, .btn {
             font-size: 18px;
             color: #565973;
             margin-top: 23px;
-            
+            font-weight: 400;
             }
+
         }
 
-        .hero-apps{
-            display: inline-flex;
-            min-height: 52px; 
-            min-width: 180px;
-            margin-top: 3px;
-            gap: 24px;
+        .app-wrapper{   /* En "wrapper" för att ha möjlighet att justera båda apparna som en "box" + att kunna använda "flex" för att få dom på en rad istället för i en kolumn.  */
+            display: flex;
+            margin-top: 26px;
             
+            .appstore-btn {     /* Parametrar för App Store-knappen. */
+                width: 180px;
+                height: 52px;
+                border-radius: 8px;
+                border: none;
+                background-color: var(--color-headline-text);
+
+                #appstore { height: 35.42px; width: 136px;}
+
+            }   
+
+            .googleplay-btn {   /* Parametrar för Google Play-knappen. */
+                display: grid;
+                width: 180px;
+                height: 52px;
+                border-radius: 8px;
+                border: none;
+                background-color: var(--color-headline-text);
+                grid-template-columns: auto 0.7fr auto;
+                grid-template-rows: auto 1fr;
+                row-gap: 0px;
+                column-gap: 0px;
+                margin-left: 24px;
+
+                #googleplay1 {margin-left: 2px;}
+                #googleplay2 {width: 45.33px; height: 7.14px; grid-area: 1/2; margin-bottom: 21px; margin-left: 2px;}
+                #googleplay3 {width: 98.94px; height: 19.41px; grid-area: 2/2; margin-top: -18px;}
+
+            }
+
+
         }
 
         .hero-phone {
@@ -167,24 +198,34 @@ button, .btn {
     }
 }
 
+
 .brands {
     display: flex;
     min-height: 250px;
     max-height: 250px;
 
     .brands-content{
+        height: 100px;
+        width: 1296;
         margin-top: 96px;
         margin-left: 40px;
-        align-items: flex-start;
+        align-items:flex-start;
         display: inline-flex;
         justify-content: space-evenly;
-    
-        #b1{margin-right: 24px;}
-        #b2{margin-right: 24px;}
-        #b3{margin-right: 24px;}
-        #b4{margin-right: 24px;}
-        #b5{margin-right: 12px;}
-        #b6{margin-top: -7px; margin-right:-21px;}
+
+        #logo-size1 {width: 119px; height: 30px; margin-top: 37px; margin-left: 42px;}  
+        #logo-size2 {width: 140px; height: 30px; margin-top: 37px; margin-left: 30px;}
+        #logo-size3 {width: 152px; height: 19px; margin-top: 44px; margin-left: 23px;}
+        #logo-size4 {width: 134px; height: 34px; margin-top: 35px; margin-left: 32px;}
+        #logo-size5 {width: 124px; height: 32px; margin-top: 35px; margin-left: 37px;}          
+        #logo-size6 {width: 132px; height: 35px; margin-top: 36px; margin-left: 36px;}          
+        
+        #b1{width: 196px; height: 100px; border-radius: 8px; border: 1px solid #E2E5F1; margin-right: 21px;}
+        #b2{width: 196px; height: 100px; border-radius: 8px; border: 1px solid #E2E5F1; margin-right: 21px;}
+        #b3{width: 196px; height: 100px; border-radius: 8px; border: 1px solid #E2E5F1; margin-right: 21px;}
+        #b4{width: 196px; height: 100px; border-radius: 8px; border: 1px solid #E2E5F1; margin-right: 21px;}
+        #b5{width: 196px; height: 100px; border-radius: 8px; border: 1px solid #E2E5F1; margin-right: 21px;}
+        #b6{width: 196px; height: 100px; border-radius: 8px; border: 1px solid #E2E5F1; box-shadow: 1px 3px 1px 2px #e2e5f133;}
     } 
 }
 
@@ -229,7 +270,7 @@ button, .btn {
             justify-content: center;
             color: var(--color-heading-text);
             font-size: 40px;
-            font-weight: 900;
+            font-weight: 800;
             margin-top: 73px;
             margin-left: 58px;
             
@@ -244,8 +285,7 @@ button, .btn {
             margin-left: 96px;
 
             .phone1 {
-                margin-right: 0px;
-                
+                margin-right: 0px; 
             }
 
             .phone2 {
@@ -267,7 +307,7 @@ button, .btn {
 
             .bottom-text-h4 {
                 font-size: 24px;
-                font-weight:bolder;
+                font-weight:800;
                 display: flex;
                 justify-content: center;
                 color: var(--color-headline-text);
@@ -295,11 +335,29 @@ button, .btn {
     background-color: var(--backgroundColorWhite);
 
     .subscribe-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         height: 222px;
         width: 1290px;
         margin-top: 30px;
         border-radius: 8px;
         background-color: var(--backgroundColorGray);
+
+        .img-and-text {
+            gap: 32px;
+            display: flex;
+            font-size: 24px;
+            font-weight:800;
+            margin-left: 110px;
+            color: var(--color-headline-text);
+            
+        }
+
+        .link-and-btn {
+            
+        }
+
     } 
 }
 
