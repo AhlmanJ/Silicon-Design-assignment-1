@@ -10,7 +10,8 @@
     --backgroundColorWhite: #ffffff;
     --backgroundColorGray: #F3F6FF;
     --color-headline-text: #0B0F19;
-    --color-paragraph-text: #565973;
+    --color-gray700-text: #565973;
+    --color-gray600-text: #9397AD;
     --color-nav-btn: #6366F1;
     --color-text-navbtn: #ffffff;
     --color-switch-btn: #9397AD;
@@ -28,12 +29,12 @@ body {      /* Body-element för att samla alla egenskaper ( properties ) och de
     font-style: normal;
     font-family: manrope , sans-serif;
     line-height: 1.5;
-    --backgroundColorWhite: #ffffff;  
-    --color: #565973;
+    background-color: var(--backgroundColorWhite);  
+    color: var(--color-paragraph-text);
 }
 
 h1,h2,h3,h4,h5,h6 {
-    color: var(--color-heading-text);
+    color: var(--color-headline-text);
     font-family: manrope , sans-serif;
 }
 
@@ -79,7 +80,7 @@ header { /* För varje sektion skapar jag en "wrapper" i HTML och här skapar ja
                 font-weight: 600;
                 font-size: 16px;
                 font-family: manrope;
-                color: var(--color-paragraph-text);
+                color: var(--color-gray700-text);
             }
 
             .switch {
@@ -180,9 +181,9 @@ button, .btn {  /* Element med egenskaper för knappar på webbsidan. Den här s
                 column-gap: 0px;
                 margin-left: 24px;
 
-                #googleplay1 {margin-left: 2px;}
-                #googleplay2 {width: 45.33px; height: 7.14px; grid-area: 1/2; margin-bottom: 21px; margin-left: 2px;}
-                #googleplay3 {width: 98.94px; height: 19.41px; grid-area: 2/2; margin-top: -18px;}
+                #googleplay1 {margin-left: 2px; margin-right: .5em; margin-top: .3em;}
+                #googleplay2 {width: 45.33px; height: 7.14px; grid-area: 1/2; margin-bottom: 1.1em; margin-left: 0em;}
+                #googleplay3 {width: 98.94px; height: 19.41px; grid-area: 2/2; margin-top: -1.6em; margin-left: -0.1em;}
 
             }
 
@@ -246,9 +247,232 @@ button, .btn {  /* Element med egenskaper för knappar på webbsidan. Den här s
             height: 684px;
             width: 348px;
         }
-        appfeatures {
-            height: 684px;
-            width: 348px;
+        
+        .appfeatures-container {
+        
+            display: grid;
+            margin-right: -.5em;
+            grid-template-columns: 375px 375px;
+            grid-template-rows: 190px 154px 154px 154px;
+
+            .appfeatures-heading {
+
+                grid-row: 1;
+                grid-column: 1/ span 2;
+
+                h1 {
+                    font-size: 40px;
+                    font-weight: 800;
+                    line-height: 130%;
+                    margin-top: -.3em;
+                    color: var(--color-headline-text);
+                }
+
+                .appfeatures-txt {
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 160%;
+                    margin-top: -1.1em;
+                    color: var(--color-gray600-text);
+                }
+
+            }
+
+
+            .easy-payments {
+
+                display: grid;
+                margin-top: -1em;
+                grid-column: 1;
+                grid-row: 2;
+                grid-template-columns: 130,5px 130,5px;
+                grid-template-rows: 59px 59px;
+
+                .img-card {
+                    height: 60px; width: 60px;
+                }
+
+                .easy-paymentsh5 {
+                    grid-area: 1/2;
+                    font-size: 21px;
+                    font-weight: 800;
+                    line-height: 140%;
+                    margin-top: -27px;
+                    counter-reset: var(--color-headline-text);
+                }
+
+                .easy-payments-text {
+               
+                    grid-area: 2/2;
+                    font-weight: 400;
+                    line-height: 160%;
+                    margin-top: -30px;
+                    line-height: .8em;
+                    color: var(--color-gray700-text);
+                }
+            }
+
+            .data-security {
+
+                display: grid;
+                margin-top: -1em;
+                grid-column: 2;
+                grid-row: 2;
+                grid-template-columns: 130,5px 130,5px auto;
+                grid-template-rows: 59px 59px;
+
+                .img-card {
+                    height: 60px; width: 60px;
+                }
+
+                .data-securityh5 {
+                    grid-area: 1/2;
+                    font-size: 21px;
+                    font-weight: 800;
+                    line-height: 140%;
+                    margin-top: -27px;
+                    
+                    counter-reset: var(--color-headline-text);
+                }
+
+                .data-security-text {
+                    grid-area: 2/2;
+                    font-weight: 400;
+                    line-height: 160%;
+                    margin-top: -30px;
+                    line-height: .8em;
+                    color: var(--color-gray700-text);
+                }
+            }
+
+            .cost-statistics {
+
+                display: grid;
+                grid-column: 1;
+                grid-row: 3;
+                margin-top: -.2em;
+                grid-template-columns: 130,5px 130,5px auto;
+                grid-template-rows: 59px 59px;
+
+                .img-card {
+                    height: 60px; width: 60px;
+                }
+
+                .cost-statisticsh5 {
+                    grid-area: 1/2;
+                    font-size: 21px;
+                    font-weight: 800;
+                    line-height: 140%;
+                    margin-top: -27px;
+                    counter-reset: var(--color-headline-text);
+                }
+
+                .cost-statistics-text {
+                    grid-area: 2/2;
+                    font-weight: 400;
+                    line-height: 160%;
+                    margin-top: -34px;
+                    line-height: .8em;
+                    color: var(--color-gray700-text);
+                }
+            }
+
+            .support {
+
+                display: grid;
+                grid-column: 2;
+                grid-row: 3;
+                margin-top: -.2em;
+                grid-template-columns: 130,5px 130,5px auto;
+                grid-template-rows: 59px 59px;
+
+                .img-card {
+                    height: 60px; width: 60px;
+                }
+
+                .supporth5 {
+                    grid-area: 1/2;
+                    font-size: 21px;
+                    font-weight: 800;
+                    line-height: 140%;
+                    margin-top: -27px;
+                    counter-reset: var(--color-headline-text);
+                }
+
+                .support-text {
+                    grid-area: 2/2;
+                    font-weight: 400;
+                    line-height: 160%;
+                    margin-top: -34px;
+                    line-height: .8em;
+                    color: var(--color-gray700-text);
+                }
+            }
+
+            .regular-cashback {
+
+                display: grid;
+                grid-column: 1;
+                grid-row: 4;
+                margin-top: .4em;
+                grid-template-columns: 130,5px 130,5px auto;
+                grid-template-rows: 59px 59px;
+
+                .img-card {
+                    height: 60px; width: 60px;
+                }
+
+                .regular-cashbackh5 {
+                    grid-area: 1/2;
+                    font-size: 21px;
+                    font-weight: 800;
+                    line-height: 140%;
+                    margin-top: -27px;
+                    counter-reset: var(--color-headline-text);
+                }
+
+                .regular-cashback-text {
+                    grid-area: 2/2;
+                    font-weight: 400;
+                    line-height: 160%;
+                    margin-top: -34px;
+                    line-height: .8em;
+                    color: var(--color-gray700-text);
+                }   
+            }
+
+            .top-standards {
+
+                display: grid;
+                grid-column: 2;
+                grid-row: 4;
+                margin-top: .4em;
+                grid-template-columns: 130,5px 130,5px auto;
+                grid-template-rows: 59px 59px;
+
+                .img-card {
+                    height: 60px; width: 60px;
+                }
+
+                .top-standardsh5 {
+                    grid-area: 1/2;
+                    font-size: 21px;
+                    font-weight: 800;
+                    line-height: 140%;
+                    margin-top: -27px;
+                    counter-reset: var(--color-headline-text);
+                }
+
+                .top-standards-text {
+                    grid-area: 2/2;
+                    font-weight: 400;
+                    line-height: 160%;
+                    margin-top: -34px;
+                    line-height: .8em;
+                    color: var(--color-gray700-text);
+                }
+            }
+
         }
     }
 }
@@ -364,7 +588,10 @@ button, .btn {  /* Element med egenskaper för knappar på webbsidan. Den här s
 .footer {
     min-height: 130px;
     max-height: 130px;
+
     .footer-content {
+
+
 
     }
 }
