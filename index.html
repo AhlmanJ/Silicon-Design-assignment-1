@@ -8,7 +8,6 @@
 <title> - Silicon Design </title>
 </head>
 <body>
-   <script src="js/script.js"></script>
 
     <!-- header start -->
     <header>
@@ -176,11 +175,18 @@
      <section class="subscribe">
         <div class="container">
             <div class="subscribe-content">
-                <div class="img-and-text">
-                    <div class="image"><img src="images/subscribe/notification.svg" alt=""></div>
-                    <div class="subscribe-text"><h4>Subscribe to our newsletter to stay<br>informed about latest updates</h4></div>
-                </div>
-                <div class="link-and-btn">Your Email</div>
+                    <div class="image-bell"><img src="images/subscribe/notification.svg" alt=""></div>
+                    <div class="container-subscribe-txt">
+                        <div class="subscribe-text-top"><h4>Subscribe to our newsletter to stay</div>
+                        <div class="subscribe-text-bottom"><h4>informed about latest updates</h4></div>
+                    </div>
+
+                <form action="#">
+                    <div class="form-container">
+                        <input id="placeholder" type="text" placeholder="Your Email"></form>
+                        <button class="subscribe-btn">Subscribe</button>  
+                    </div>
+                </form>
             </div>
         </div>
      </section>
@@ -188,12 +194,17 @@
 
     <!-- Footer start -->
      <section class="footer">
+
         <div class="container">
             <div class="footer-content">
-            
+                <div class="silicon">
+                    <img class="footer-text" src="images/footer/text.svg" alt="">
+                </div>
             </div>
         </div>
      </section>
     <!-- Footer end -->
+
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -9,6 +9,7 @@
 :root {  /* I "root"-elementet deklarerar jag olika variabler med färger som förekommer ofta och på så sätt kan jag enkelt hämta rätt färg med funktionen "var()"  */
     --backgroundColorWhite: #ffffff;
     --backgroundColorGray: #F3F6FF;
+    --borderColor-mail-placeholder: #D4D7E5;
     --color-headline-text: #0B0F19;
     --color-gray700-text: #565973;
     --color-gray600-text: #9397AD;
@@ -35,7 +36,7 @@ body {      /* Body-element för att samla alla egenskaper ( properties ) och de
 
 h1,h2,h3,h4,h5,h6 {
     color: var(--color-headline-text);
-    font-family: manrope , sans-serif;
+    font-family: manrope, sans-serif;
 }
 
 img {
@@ -103,6 +104,7 @@ button, .btn {  /* Element med egenskaper för knappar på webbsidan. Den här s
     padding: 5px 20px;
     border-radius: 4px;
     text-decoration: none;
+    cursor: pointer;
     gap: 8;
     
     img {
@@ -259,6 +261,7 @@ button, .btn {  /* Element med egenskaper för knappar på webbsidan. Den här s
 
                 grid-row: 1;
                 grid-column: 1/ span 2;
+                
 
                 h1 {
                     font-size: 40px;
@@ -283,6 +286,7 @@ button, .btn {  /* Element med egenskaper för knappar på webbsidan. Den här s
 
                 display: grid;
                 margin-top: -1em;
+                margin-right: 3.3em;
                 grid-column: 1;
                 grid-row: 2;
                 grid-template-columns: 130,5px 130,5px;
@@ -294,10 +298,10 @@ button, .btn {  /* Element med egenskaper för knappar på webbsidan. Den här s
 
                 .easy-paymentsh5 {
                     grid-area: 1/2;
-                    font-size: 21px;
+                    font-size: 20px;
                     font-weight: 800;
-                    line-height: 140%;
-                    margin-top: -27px;
+                    line-height: 1.4em;
+                    margin-top: -1.3em;
                     counter-reset: var(--color-headline-text);
                 }
 
@@ -305,8 +309,7 @@ button, .btn {  /* Element med egenskaper för knappar på webbsidan. Den här s
                
                     grid-area: 2/2;
                     font-weight: 400;
-                    line-height: 160%;
-                    margin-top: -30px;
+                    margin-top: -1.8em;
                     line-height: .8em;
                     color: var(--color-gray700-text);
                 }
@@ -316,6 +319,7 @@ button, .btn {  /* Element med egenskaper för knappar på webbsidan. Den här s
 
                 display: grid;
                 margin-top: -1em;
+                margin-left: 1.4em;
                 grid-column: 2;
                 grid-row: 2;
                 grid-template-columns: 130,5px 130,5px auto;
@@ -327,20 +331,20 @@ button, .btn {  /* Element med egenskaper för knappar på webbsidan. Den här s
 
                 .data-securityh5 {
                     grid-area: 1/2;
-                    font-size: 21px;
+                    font-size: 20px;
                     font-weight: 800;
-                    line-height: 140%;
-                    margin-top: -27px;
-                    
+                    line-height: 1.4em;
+                    margin-top: -1.3em;
+                    margin-left: -.2em;
                     counter-reset: var(--color-headline-text);
                 }
 
                 .data-security-text {
                     grid-area: 2/2;
                     font-weight: 400;
-                    line-height: 160%;
-                    margin-top: -30px;
-                    line-height: .8em;
+                    margin-top: -1.8em;
+                    margin-left: -.2em;
+                    line-height: 0.8em;
                     color: var(--color-gray700-text);
                 }
             }
@@ -348,9 +352,10 @@ button, .btn {  /* Element med egenskaper för knappar på webbsidan. Den här s
             .cost-statistics {
 
                 display: grid;
+                margin-top: -.2em;
+                margin-right: 0.9em;
                 grid-column: 1;
                 grid-row: 3;
-                margin-top: -.2em;
                 grid-template-columns: 130,5px 130,5px auto;
                 grid-template-rows: 59px 59px;
 
@@ -360,18 +365,17 @@ button, .btn {  /* Element med egenskaper för knappar på webbsidan. Den här s
 
                 .cost-statisticsh5 {
                     grid-area: 1/2;
-                    font-size: 21px;
+                    font-size: 20px;
                     font-weight: 800;
-                    line-height: 140%;
-                    margin-top: -27px;
+                    line-height: 1.4em;
+                    margin-top: -1.3em;
                     counter-reset: var(--color-headline-text);
                 }
 
                 .cost-statistics-text {
                     grid-area: 2/2;
                     font-weight: 400;
-                    line-height: 160%;
-                    margin-top: -34px;
+                    margin-top: -2em;
                     line-height: .8em;
                     color: var(--color-gray700-text);
                 }
@@ -380,9 +384,10 @@ button, .btn {  /* Element med egenskaper för knappar på webbsidan. Den här s
             .support {
 
                 display: grid;
+                margin-top: -.2em;
+                margin-left: 1.4em;
                 grid-column: 2;
                 grid-row: 3;
-                margin-top: -.2em;
                 grid-template-columns: 130,5px 130,5px auto;
                 grid-template-rows: 59px 59px;
 
@@ -392,18 +397,19 @@ button, .btn {  /* Element med egenskaper för knappar på webbsidan. Den här s
 
                 .supporth5 {
                     grid-area: 1/2;
-                    font-size: 21px;
+                    font-size: 20px;
                     font-weight: 800;
-                    line-height: 140%;
-                    margin-top: -27px;
+                    line-height: 1.4em;
+                    margin-top: -1.3em;
+                    margin-left: -.9em;
                     counter-reset: var(--color-headline-text);
                 }
 
                 .support-text {
                     grid-area: 2/2;
                     font-weight: 400;
-                    line-height: 160%;
-                    margin-top: -34px;
+                    margin-top: -2em;
+                    margin-left: -1em;
                     line-height: .8em;
                     color: var(--color-gray700-text);
                 }
@@ -412,9 +418,10 @@ button, .btn {  /* Element med egenskaper för knappar på webbsidan. Den här s
             .regular-cashback {
 
                 display: grid;
+                margin-top: .4em;
+                margin-right: 1.7em;
                 grid-column: 1;
                 grid-row: 4;
-                margin-top: .4em;
                 grid-template-columns: 130,5px 130,5px auto;
                 grid-template-rows: 59px 59px;
 
@@ -424,18 +431,17 @@ button, .btn {  /* Element med egenskaper för knappar på webbsidan. Den här s
 
                 .regular-cashbackh5 {
                     grid-area: 1/2;
-                    font-size: 21px;
+                    font-size: 20px;
                     font-weight: 800;
-                    line-height: 140%;
-                    margin-top: -27px;
+                    line-height: 1.4em;
+                    margin-top: -1.2em;
                     counter-reset: var(--color-headline-text);
                 }
 
                 .regular-cashback-text {
                     grid-area: 2/2;
                     font-weight: 400;
-                    line-height: 160%;
-                    margin-top: -34px;
+                    margin-top: -1.8em;
                     line-height: .8em;
                     color: var(--color-gray700-text);
                 }   
@@ -444,9 +450,10 @@ button, .btn {  /* Element med egenskaper för knappar på webbsidan. Den här s
             .top-standards {
 
                 display: grid;
+                margin-top: .4em;
+                margin-left: 1.4em;
                 grid-column: 2;
                 grid-row: 4;
-                margin-top: .4em;
                 grid-template-columns: 130,5px 130,5px auto;
                 grid-template-rows: 59px 59px;
 
@@ -456,18 +463,17 @@ button, .btn {  /* Element med egenskaper för knappar på webbsidan. Den här s
 
                 .top-standardsh5 {
                     grid-area: 1/2;
-                    font-size: 21px;
+                    font-size: 20px;
                     font-weight: 800;
-                    line-height: 140%;
-                    margin-top: -27px;
+                    line-height: 1.4em;
+                    margin-top: -1.2em;
                     counter-reset: var(--color-headline-text);
                 }
 
                 .top-standards-text {
                     grid-area: 2/2;
                     font-weight: 400;
-                    line-height: 160%;
-                    margin-top: -34px;
+                    margin-top: -1.8em;
                     line-height: .8em;
                     color: var(--color-gray700-text);
                 }
@@ -553,45 +559,88 @@ button, .btn {  /* Element med egenskaper för knappar på webbsidan. Den här s
 }
 
 .subscribe {
-    min-height: 282px;
-    max-height: 282px;
+    min-height: 334px;
+    max-height: 334px;
     margin-left: 79px;
+    display: flex;
     background-color: var(--backgroundColorWhite);
 
     .subscribe-content {
+
         display: flex;
         align-items: center;
         justify-content: space-between;
         height: 222px;
-        width: 1290px;
-        margin-top: 30px;
+        width: 1296px;
+        margin-top: 112px;
         border-radius: 8px;
         background-color: var(--backgroundColorGray);
 
-        .img-and-text {
-            gap: 32px;
+        .image-bell {
+            margin-left: 6.87em;
+        }
+
+        .container-subscribe-txt {
+                gap: 32px;
+                font-size: 24px;
+                font-weight:800;
+                margin-right: 2.1em;
+                color: var(--color-headline-text);
+
+            .subscribe-text-top {
+                margin-top: 72px;
+                margin-bottom: -36px;
+            }
+
+            .subscribe-text-bottom {
+                margin-top: 0px;
+                margin-bottom: 77px;
+            }
+        }
+
+        .form-container {
+
             display: flex;
-            font-size: 24px;
-            font-weight:800;
-            margin-left: 110px;
-            color: var(--color-headline-text);
-            
-        }
+            margin-right: 6.87em;
 
-        .link-and-btn {
-            
-        }
+            #placeholder {
+                height: 3.3em;
+                width: 20.63em;
+                border: 1px solid;
+                border-color: var(--borderColor-mail-placeholder);
+                border-radius: .5em 0 0 .5em;
+                cursor: pointer;
 
+            }
+
+            .subscribe-btn {
+                height: 3.5em;
+                width: 8.88em;
+                font-weight: 600;
+                align-items: center;
+                justify-content: center;
+                border: none;
+                border-radius: 0 .5em .5em 0;
+    
+            }
+        }
     } 
 }
 
 .footer {
     min-height: 130px;
     max-height: 130px;
-
-    .footer-content {
-
-
-
+    background-color: var(--backgroundColorWhite);
+    
+    .silicon {    
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        .footer-text {
+            width: 20%;
+            margin-top: 3.75em;
+        }
     }
 }
