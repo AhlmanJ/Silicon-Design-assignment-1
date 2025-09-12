@@ -10,6 +10,7 @@
     --backgroundColorWhite: #ffffff;
     --backgroundColorGray: #F3F6FF;
     --borderColor-mail-placeholder: #D4D7E5;
+    --color-placeholder-content: #B4B7C9;
     --color-headline-text: #0B0F19;
     --color-gray700-text: #565973;
     --color-gray600-text: #9397AD;
@@ -18,6 +19,7 @@
     --color-switch-btn: #9397AD;
     --color-nav-btn-hover: linear-gradient(90deg, rgb(99, 102, 241) 0% ,rgb(139, 92, 246) 50% ,rgb(217, 70, 239) 100%);
     --color-download-btn-text: #ffffff;
+    --color-silicon-text-footer: #9397AD;
 }
 
 html {
@@ -45,7 +47,7 @@ img {
 }
 
 .container { /* Elementet container finns med i varje sektion för att "styra" bredden på min webbsida. */
-    width: 100%;
+    width: 100%; 
     max-width: 1320px;
     margin-left: auto;
     margin-right: auto;
@@ -603,15 +605,23 @@ button, .btn {  /* Element med egenskaper för knappar på webbsidan. Den här s
             display: flex;
             margin-right: 6.87em;
 
-            #placeholder {
+            .email-placeholder {
                 height: 3.3em;
                 width: 20.63em;
+                font-weight: 400;
+                font-size: 1em;
                 border: 1px solid;
                 border-color: var(--borderColor-mail-placeholder);
                 border-radius: .5em 0 0 .5em;
                 cursor: pointer;
-
             }
+
+             .material-symbols-outlined {
+                    position: absolute;
+                    margin-top: .7em;
+                    margin-left: 1.06em;
+                    color: var(--color-placeholder-content);
+                }
 
             .subscribe-btn {
                 height: 3.5em;
@@ -632,15 +642,15 @@ button, .btn {  /* Element med egenskaper för knappar på webbsidan. Den här s
     max-height: 130px;
     background-color: var(--backgroundColorWhite);
     
-    .silicon {    
-        
+    .silicon {
         display: flex;
+        margin-top: 3.75em;
+        margin-left: 4em;
+        font-size: .94em;
+        font-weight: 400;
+        line-height: 1.6em;
         align-items: center;
         justify-content: center;
-        
-        .footer-text {
-            width: 20%;
-            margin-top: 3.75em;
-        }
+        color: var(--color-silicon-text-footer);
     }
 }
