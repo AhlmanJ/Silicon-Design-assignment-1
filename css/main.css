@@ -6,7 +6,7 @@
     margin: 0;
 }
 
-:root {  /* I "root"-elementet deklarerar jag olika variabler med färger som förekommer ofta och på så sätt kan jag enkelt hämta rätt färg med funktionen "var()"  */
+:root {  
     --backgroundColorWhite: #ffffff;
     --backgroundColorGray: #F3F6FF;
     --borderColor-mail-placeholder: #D4D7E5;
@@ -26,7 +26,7 @@ html {
     scroll-behavior: smooth;
 }
 
-body {      /* Body-element för att samla alla egenskaper ( properties ) och dess värde. */
+body {      
     font-size: 16px;
     font-weight: 400;
     cursor: default;
@@ -47,7 +47,7 @@ img {
     height: auto;
 }
 
-.container { /* Elementet container finns med i varje sektion för att "styra" bredden på min webbsida. */
+.container { 
     width: 100%; 
     max-width: 1320px;
     margin-left: auto;
@@ -56,15 +56,15 @@ img {
     padding-right: 1rem;
 }
 
-header { /* För varje sektion skapar jag en "wrapper" i HTML och här skapar jag ett Element där jag bestämmer värdet på de olika egenskaperna för varje sektion. T.ex. höjd och bakgrundsfärg mm. */
-    display: grid; /* Använder Grid för att placera de olika objekten i min header. */
+header { 
+    display: grid; /* Grid to place the content in the header. */
     position: fixed;
-    z-index: 1;
-    height: 76px;
-    max-height: 76px;
+    z-index: 1; 
+    height: 4.75em;
+    max-height: 4.75em;
     width: 100%;
-    margin-left: 312px;
-    opacity: 1.0;
+    margin-left: 19.5em;
+    opacity: 1; /* Full opacity for the header-section. */
     align-items: center;
     grid-template-columns: 3fr 0.25fr 0.15fr 1fr;
    
@@ -73,14 +73,14 @@ header { /* För varje sektion skapar jag en "wrapper" i HTML och här skapar ja
         justify-content: space-between;
         align-items: center;
        
-        .switch-and-btn {
+        .txtAndSwitch-wrapper {
             display: flex;
             justify-content: space-between;
             align-items: center;
             gap: 2rem;
 
             .darkmode-text{
-                margin-right: -27px;
+                margin-right: -1.69em;
                 font-weight: 600;
                 font-size: 16px;
                 font-family: manrope;
@@ -88,7 +88,7 @@ header { /* För varje sektion skapar jag en "wrapper" i HTML och här skapar ja
             }
 
             .switch {
-                margin-right: -14px;
+                margin-right: -.88em;
                 margin-top: 1.5rem;
             }
 
@@ -96,16 +96,15 @@ header { /* För varje sektion skapar jag en "wrapper" i HTML och här skapar ja
     }
 }
 
-button, .btn {  /* Element med egenskaper för knappar på webbsidan. Den här sätter min "grundinställning" men har även skapat separata element för knapparna till App Store och Google Play p.g.a annan design. */
-    
+button, .btn{ 
     color:var(--color-text-navbtn);
     background-color: var(--color-nav-btn);
     display: flex;
     align-items: center;
     justify-content: space-between; 
-    gap: 9px;
-    padding: 5px 20px;
-    border-radius: 4px;
+    gap: .56em;
+    padding: .31em 1.3em;
+    border-radius: .25em;
     text-decoration: none;
     cursor: pointer;
     gap: 8;
@@ -113,11 +112,11 @@ button, .btn {  /* Element med egenskaper för knappar på webbsidan. Den här s
     img {
         height: 100%;
         width: auto;
-        margin-left: -10px;
+        margin-left: -.9em;
     }
     
     &:hover {
-    background: var(--color-nav-btn-hover);
+        background: var(--color-nav-btn-hover);
     }
 
 }
@@ -130,18 +129,19 @@ button, .btn {  /* Element med egenskaper för knappar på webbsidan. Den här s
     background: #F1F4FD;
     background:  radial-gradient(at bottom, rgba(99, 101, 241, 10%) 0%, rgba(219, 70, 239, 5%) 42%, rgba(241, 244, 253, 7%) 83%);
     
-    .hero-content { /* Skapar en "box" för allt innehåll i Hero-sektionen. */
+    /* All content for hero-section */
+    .hero-content {
         display: grid;
         grid-template-columns: 1fr auto;
         grid-template-rows: 1fr;
-        margin-left: 40px;
+        margin-left: 2.5em;
 
         .hero-text {
 
-            margin-top: 193px;
+            margin-top: 12.06em;
 
             h1 {
-            line-height: 125%;
+            line-height: 1.25em;
             font-size: 56px;  
             font-weight: 800;
             color: #0B0F19;
@@ -152,43 +152,44 @@ button, .btn {  /* Element med egenskaper för knappar på webbsidan. Den här s
             line-height: 160%;
             font-size: 18px;
             color: #565973;
-            margin-top: 23px;
+            margin-top: 1.44em;
             font-weight: 400;
             }
 
         }
 
-        .app-wrapper{   /* En "wrapper" för att ha möjlighet att justera båda apparna som en "box" + att kunna använda "flex" för att få dom på en rad istället för i en kolumn.  */
+        /* Wrapping the two buttons for App store and Google Play */
+        .app-wrapper{
             display: flex;
-            margin-top: 26px;
+            margin-top: 1.63em;
             
-            .appstore-btn {     /* Parametrar för App Store-knappen. */
-                width: 180px;
-                height: 52px;
-                border-radius: 8px;
+            .appstore-btn {
+                width: 11.25em;
+                height: 3.25em;
+                border-radius: .5em;
                 border: none;
                 background-color: var(--color-headline-text);
 
-                #appstore { height: 35.42px; width: 136px;}
+                #appstore { height: 2.21em; width: 8.5em; margin-left: 0;}
 
             }   
 
-            .googleplay-btn {   /* Parametrar för Google Play-knappen. */
+            .googleplay-btn {
                 display: grid;
-                width: 180px;
-                height: 52px;
-                border-radius: 8px;
+                width: 11.25em;
+                height: 3.25em;
+                border-radius: .5em;
                 border: none;
                 background-color: var(--color-headline-text);
                 grid-template-columns: auto 0.7fr auto;
                 grid-template-rows: auto 1fr;
-                row-gap: 0px;
-                column-gap: 0px;
-                margin-left: 24px;
+                row-gap: 0;
+                column-gap: 0;
+                margin-left: 1.5em;
 
-                #googleplay1 {margin-left: 2px; margin-right: .5em; margin-top: .3em;}
-                #googleplay2 {width: 45.33px; height: 7.14px; grid-area: 1/2; margin-bottom: 1.1em; margin-left: 0em;}
-                #googleplay3 {width: 98.94px; height: 19.41px; grid-area: 2/2; margin-top: -1.6em; margin-left: -0.1em;}
+                #googleplay1 {margin-left: .13em; margin-right: .5em; margin-top: .3em;}
+                #googleplay2 {width: 2.83em; height: .45em; grid-area: 1/2; margin-bottom: 1.1em; margin-left: 0em;}
+                #googleplay3 {width: 6.18em; height: 1.21em; grid-area: 2/2; margin-top: -1.6em; margin-left: -0.1em;}
 
             }
 
@@ -197,8 +198,8 @@ button, .btn {  /* Element med egenskaper för knappar på webbsidan. Den här s
 
         .hero-phone {
         display: flex;
-        margin-top: 188px;
-        margin-right: -12px;
+        margin-top: 11.75em;
+        margin-right: -.75em;
         }
 
     }
@@ -244,13 +245,13 @@ button, .btn {  /* Element med egenskaper för knappar på webbsidan. Den här s
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-top: 58px;
-        margin-left: 40px;
-        margin-right: -15px;
+        margin-top: 3.625em;
+        margin-left: 2.5em;
+        margin-right: -.94em;
 
         .phone-card {
-            height: 684px;
-            width: 348px;
+            height: 42.75em;
+            width: 21.75em;
         }
         
         .appfeatures-container {
@@ -296,7 +297,7 @@ button, .btn {  /* Element med egenskaper för knappar på webbsidan. Den här s
                 grid-template-rows: 59px 59px;
 
                 .img-card {
-                    height: 60px; width: 60px;
+                    height: 3.75em; width: 3.75em;
                 }
 
                 .easy-paymentsh5 {
@@ -329,7 +330,7 @@ button, .btn {  /* Element med egenskaper för knappar på webbsidan. Den här s
                 grid-template-rows: 59px 59px;
 
                 .img-card {
-                    height: 60px; width: 60px;
+                    height: 3.75em; width: 3.75em;
                 }
 
                 .data-securityh5 {
@@ -363,7 +364,7 @@ button, .btn {  /* Element med egenskaper för knappar på webbsidan. Den här s
                 grid-template-rows: 59px 59px;
 
                 .img-card {
-                    height: 60px; width: 60px;
+                    height: 3.75em; width: 3.75em;
                 }
 
                 .cost-statisticsh5 {
@@ -395,7 +396,7 @@ button, .btn {  /* Element med egenskaper för knappar på webbsidan. Den här s
                 grid-template-rows: 59px 59px;
 
                 .img-card {
-                    height: 60px; width: 60px;
+                    height: 3.75em; width: 3.75em;
                 }
 
                 .supporth5 {
@@ -429,7 +430,7 @@ button, .btn {  /* Element med egenskaper för knappar på webbsidan. Den här s
                 grid-template-rows: 59px 59px;
 
                 .img-card {
-                    height: 60px; width: 60px;
+                    height: 3.75em; width: 3.75em;
                 }
 
                 .regular-cashbackh5 {
@@ -461,7 +462,7 @@ button, .btn {  /* Element med egenskaper för knappar på webbsidan. Den här s
                 grid-template-rows: 59px 59px;
 
                 .img-card {
-                    height: 60px; width: 60px;
+                    height: 3.75em; width: 3.75em;
                 }
 
                 .top-standardsh5 {
@@ -505,7 +506,7 @@ button, .btn {  /* Element med egenskaper för knappar på webbsidan. Den här s
             font-size: 40px;
             font-weight: 800;
             margin-top: 73px;
-            margin-left: 58px;
+            margin-left: 61px;
             
             
         }
@@ -518,17 +519,17 @@ button, .btn {  /* Element med egenskaper för knappar på webbsidan. Den här s
             margin-left: 96px;
 
             .phone1 {
-                margin-right: 0px; 
+                margin-right: 0; 
             }
 
             .phone2 {
-                margin-left: 4px;
-                margin-right: 0px;
+                margin-left: 0.25em;
+                margin-right: 0;
             }
 
             .phone3 {
-                margin-left: 0px;
-                margin-right: 40px;
+                margin-left: 0;
+                margin-right: 2.5em;
             }
         }
 
@@ -608,7 +609,7 @@ button, .btn {  /* Element med egenskaper för knappar på webbsidan. Den här s
             margin-right: 6.87em;
 
             .email-icon {    
-                height: 3.4em;
+                height: 3.42em;
                 width: 2.88em;
                 border-radius: .5em 0 0 .5em;
                 border-left: 1px solid;
@@ -632,7 +633,7 @@ button, .btn {  /* Element med egenskaper för knappar på webbsidan. Den här s
                 cursor: pointer;
                 border-left: none;
                 border-right: none;
-                border-color: var(--borderColor-mail-placeholder);             
+                border-color: var(--borderColor-mail-placeholder);
 
                 &::placeholder { 
                     font-weight: 400;
@@ -644,9 +645,10 @@ button, .btn {  /* Element med egenskaper för knappar på webbsidan. Den här s
                     font-weight: 400;
                     outline: none;
                     color: #565973;
-                    
                 }
+
             }
+
 
             .subscribe-btn {
                 height: 3.5em;
