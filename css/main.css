@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
-
 *, *::before *::after {
     box-sizing: border-box;
     margin: 0;
@@ -113,12 +112,12 @@ header {
                     height: 1.5em;
                     cursor: pointer;
                     border-radius: 100vw;
+                    transition: background .2s;
                     background-color: var(--backgroundColor-slider);
-
                 }
 
                 .toggle-input:checked ~ .slider {
-                    background-color: var(--backgroundColor-slider);
+                    background-color: var(--color-nav-btn);
                 }
                 
                 .slider::after { 
@@ -129,14 +128,14 @@ header {
                     margin-left: 0.125em;
                     border-radius: 50%;
                     position: absolute;
-                    transition: transform 0.2s; /* For transition right- to left-side.*/
+                    transition: transform .2s; /* For transition right- to left-side.*/
                     background-color: var(--backgroundColorWhite);
                 }
 
 
                 .toggle-input:checked ~ .slider::after {
                     transform: translateX(1.25em);
-                    transition: 0.2s; /*For transition left- to right-side. */
+                    transition: .2s; /*For transition left- to right-side. */
                     background-color: var(--backgroundColorWhite);
                     
                 }                
@@ -147,17 +146,16 @@ header {
 }
 
 button, .btn{ 
-    color:var(--color-text-navbtn);
-    background-color: var(--color-nav-btn);
-    display: flex;
-    align-items: center;
-    justify-content: space-between; 
     gap: .56em;
-    padding: .31em 1.3em;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    padding: .32em 1.2em;
     border-radius: .25em;
     text-decoration: none;
-    cursor: pointer;
-    gap: 8;
+    justify-content: space-between; 
+    color:var(--color-text-navbtn);
+    background-color: var(--color-nav-btn);
     
     img {
         height: 100%;
@@ -181,13 +179,14 @@ button, .btn{
     /* ---- All content for hero-section ---- */
     .hero-content {
         display: grid;
-        grid-template-columns: 1fr auto;
-        grid-template-rows: 1fr;
+        grid-template-columns: 500px 1420px;
+        grid-template-rows: 400px 438px;
         margin-left: 2.5em;
 
-        .hero-text {
-
-            margin-top: 12.06em;
+        .hero-left-side {
+            grid-column: 1;
+            grid-row: 1;
+            margin-top: 10em;
 
             h1 {
             line-height: 1.25em;
@@ -201,16 +200,17 @@ button, .btn{
             line-height: 160%;
             font-size: 18px;
             color: #565973;
-            margin-top: 1.44em;
+            margin-top: 1.3em;
             font-weight: 400;
             }
-
         }
 
         /* ---- Wrapping the two buttons for App store and Google Play ---- */
-        .app-wrapper{
+        .app-container{
+            grid-column: 1;
+            grid-row: 2;
             display: flex;
-            margin-top: 1.63em;
+            margin-top: 4.3em;
             
             .appstore-btn {
                 width: 11.25em;
@@ -241,18 +241,18 @@ button, .btn{
                 #googleplay3 {width: 6.18em; height: 1.21em; grid-area: 2/2; margin-top: -1.6em; margin-left: -0.1em;}
 
             }
-
         }
 
         .hero-phone {
-        display: flex;
-        margin-top: 11.75em;
-        margin-right: -.75em;
+            display: flex;
+            grid-column: 2;
+            grid-row: 1/ span 2;
+            margin-top: 10em;
+            margin-right: 35.7em;
+            
         }
-
     }
 }
-
 
 .brands {
     display: flex;
