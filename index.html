@@ -13,13 +13,20 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <div class="SiliconImg">
-                    <a href="index.html"><img src="images/header/logo.svg" alt="Silicon Design Logotype"></a>
+                <div class="siliconImg">
+                    <a href="index.html" aria-label="visit the company's website."><img src="images/header/logo.svg" alt="Silicon Design Logotype"></a>
                 </div>
                 <div class="txtAndSwitch-wrapper">
                         <div class="darkmode-text"><p>Dark mode</p></div>
-                        <div class="switch"> <a href="#"><img src="images/header/toggleswitch.svg" alt=""></a></div>
-                        <div class="header-btn"> <a class="btn" href="#">&nbsp;<img src="images/header/signin.png">Sign in / up</a>
+                        
+                        <!-- Darkmode-switch START -->
+                        <label class="toggle" for="darkmode-switch"> <!-- In order to make the toggel-switch work, make sure to connect label and input with same form control and id!-->
+                            <input class="toggle-input" type="checkbox" id="darkmode-switch" area-label="darkmode toggle.">
+                            <span class="slider"></span>
+                        </label>
+                        <!-- Darkmode-switch END -->
+
+                        <div class="header-btn" area-lable="sign in or sign up"> <a class="btn" href="#">&nbsp;<img src="images/header/signin.png" alt="Sign in logo">Sign in / up</a>
                     </div>
                 </div>
             </div>
@@ -36,8 +43,8 @@
                     <h1>Manage All Your<br> Money In One App</h1>
                     <p>We offer you a new generation of the mobile banking<br>Save, spend & manage money in your pocket.</p> 
                 <div class="app-wrapper">
-                    <button class="appstore-btn"><img id="appstore" src="images/hero/Img-AppStore.svg" alt=""></button>
-                    <button class="googleplay-btn">
+                    <button id="appstore-btn" class="appstore-btn" area-label="to app store."><img id="appstore" src="images/hero/Img-AppStore.svg" alt="App store"></button>
+                    <button id="googleplay-btn" class="googleplay-btn" area-label="to google play.">
                         <img id="googleplay1" src="images/hero/icon-googleplay.svg" alt="Download App On Google Play">
                         <img id="googleplay2" src="images/hero/download-text.svg" alt="Download App On Google Play">
                         <img id="googleplay3" src="images/hero/googleplay-text.svg" alt="Download App On Google Play">
@@ -161,7 +168,7 @@
                     <div class="phone2"><img src="images/howdoesitwork/iPhone 12 Pro 2.svg" alt=""></div>
                     <div class="phone3"><img src="images/howdoesitwork/iPhone 12 Pro 3.svg" alt=""></div>
                 </div>
-                <div class="page-footer">
+                <div class="bottom-text">
                     <div class="bottom-text-h4"><h4>Latest transaction history</h4></div>
                     <div class="bottom-text-paragraph"><p>Enim, et amet praesent pharetra. Mi non ante hendrerit amet sed. Arcu sociis tristique<br><span>quisque hac in consectur condimentum.</span></p></div>
                 </div>
@@ -175,7 +182,7 @@
      <section class="subscribe">
         <div class="container">
             <div class="subscribe-content">
-                <div class="image-bell"><img src="images/subscribe/notification.svg" alt=""></div>
+                <div class="image-bell"><img src="images/subscribe/notification.svg" alt="image of a bell"></div>
                 <div class="container-subscribe-txt">
                     <div class="subscribe-text-top"><h4>Subscribe to our newsletter to stay</div>
                     <div class="subscribe-text-bottom"><h4>informed about latest updates</h4></div>
@@ -184,9 +191,9 @@
                 <form method="post" action="#">
                     <div class="form-container">
                         <div class="email-icon"><span class="material-symbols-outlined">mail</span></div>
-                        <input class="email-placeholder" type="email" required placeholder="Your Email">
+                        <input id="enter-email" class="email-placeholder" type="email" required placeholder="Your Email" area-label="enter your email address here if you want to subscribe.">
                 </form>
-                    <button class="subscribe-btn">Subscribe</button>
+                    <button class="subscribe-btn" area-label="subscribe to our newsletter.">Subscribe</button>
                     </div>
                 </form>
             </div>
