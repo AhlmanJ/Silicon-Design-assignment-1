@@ -247,7 +247,7 @@ button, .btn{
             display: flex;
             grid-column: 2;
             margin-top: 10em;
-            margin-bottom: -2.4em;
+            margin-bottom: -2.22em;
             grid-row: 1/ span 2;
             margin-right: 38.4em;
         }
