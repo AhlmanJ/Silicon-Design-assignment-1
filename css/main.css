@@ -95,9 +95,9 @@ header {
 
             /* ----- Toggle-switch START ----- */
             .toggle {
-                width: 46px;
-                height: 24px;
-                margin-right: -3px;
+                width: 2.875em;
+                height: 1.5em;
+                margin-right: -0.19em;
                 border-radius: 50%;
                 display: inline-block;
 
@@ -109,8 +109,8 @@ header {
                 .slider {
                     position: relative;
                     display: inline-block;
-                    width: 46px;
-                    height: 24px;
+                    width: 2.875em;
+                    height: 1.5em;
                     cursor: pointer;
                     border-radius: 100vw;
                     background-color: var(--backgroundColor-slider);
@@ -123,10 +123,10 @@ header {
                 
                 .slider::after { 
                     content: '';
-                    width: 20px;
-                    height: 20px;
-                    margin-top: 2px;
-                    margin-left: 2px;
+                    width: 1.25em;
+                    height: 1.25em;
+                    margin-top: 0.125em;
+                    margin-left: 0.125em;
                     border-radius: 50%;
                     position: absolute;
                     transition: transform 0.2s; /* For transition right- to left-side.*/
@@ -135,7 +135,7 @@ header {
 
 
                 .toggle-input:checked ~ .slider::after {
-                    transform: translateX(20px);
+                    transform: translateX(1.25em);
                     transition: 0.2s; /*For transition left- to right-side. */
                     background-color: var(--backgroundColorWhite);
                     
@@ -303,18 +303,15 @@ button, .btn{
         }
         
         .appfeatures-container {
-        
             display: grid;
             margin-right: -.5em;
             grid-template-columns: 375px 375px;
             grid-template-rows: 190px 154px 154px 154px;
 
             .appfeatures-heading {
-
                 grid-row: 1;
                 grid-column: 1/ span 2;
                 
-
                 h1 {
                     font-size: 40px;
                     font-weight: 800;
@@ -330,12 +327,9 @@ button, .btn{
                     margin-top: -1.1em;
                     color: var(--color-gray600-text);
                 }
-
             }
 
-
             .easy-payments {
-
                 display: grid;
                 margin-top: -1em;
                 margin-right: 3.3em;
@@ -358,7 +352,6 @@ button, .btn{
                 }
 
                 .easy-payments-text {
-               
                     grid-area: 2/2;
                     font-weight: 400;
                     margin-top: -1.8em;
@@ -368,7 +361,6 @@ button, .btn{
             }
 
             .data-security {
-
                 display: grid;
                 margin-top: -1em;
                 margin-left: 1.4em;
@@ -402,7 +394,6 @@ button, .btn{
             }
 
             .cost-statistics {
-
                 display: grid;
                 margin-top: -.2em;
                 margin-right: 0.9em;
@@ -434,7 +425,6 @@ button, .btn{
             }
 
             .support {
-
                 display: grid;
                 margin-top: -.2em;
                 margin-left: 1.4em;
@@ -468,7 +458,6 @@ button, .btn{
             }
 
             .regular-cashback {
-
                 display: grid;
                 margin-top: .4em;
                 margin-right: 1.7em;
@@ -500,7 +489,6 @@ button, .btn{
             }
 
             .top-standards {
-
                 display: grid;
                 margin-top: .4em;
                 margin-left: 1.4em;
@@ -530,7 +518,6 @@ button, .btn{
                     color: var(--color-gray700-text);
                 }
             }
-
         }
     }
 }
@@ -614,8 +601,7 @@ button, .btn{
     margin-left: 79px;
     background-color: var(--backgroundColorWhite);
 
-    .subscribe-content {
-        
+    .subscribe-content {    
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -645,7 +631,6 @@ button, .btn{
                 margin-top: 0px;
                 margin-bottom: 77px;
             }
-
         }
 
         .form-container {
