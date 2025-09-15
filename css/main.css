@@ -24,7 +24,6 @@
 
 html {
     scroll-behavior: smooth;
-    -webkit-text-size-adjust: 100%; /* To fix an error message, i added this property to ensure broader support for users of e.g. Chrome, Edge, etc. */
 }
 
 body {      
@@ -85,7 +84,7 @@ header {
             gap: 2rem;
 
             .darkmode-text{
-                margin-right: 0.1em;
+                margin-right: 0.3em;
                 font-weight: 600;
                 font-size: 16px;
                 font-family: manrope;
@@ -96,7 +95,7 @@ header {
             .toggle {
                 width: 2.875em;
                 height: 1.5em;
-                margin-right: -0.19em;
+                margin-right: .3em;
                 border-radius: 50%;
                 display: inline-block;
 
@@ -150,7 +149,7 @@ button, .btn{
     display: flex;
     cursor: pointer;
     align-items: center;
-    padding: .32em 1.2em;
+    padding: .32em 1.3em;
     border-radius: .25em;
     text-decoration: none;
     justify-content: space-between; 
@@ -193,6 +192,7 @@ button, .btn{
             font-size: 56px;  
             font-weight: 800;
             color: #0B0F19;
+            margin-top: .89em;
             margin-bottom: 0%;
             }
 
@@ -200,7 +200,7 @@ button, .btn{
             line-height: 160%;
             font-size: 18px;
             color: #565973;
-            margin-top: 1.3em;
+            margin-top: 1.4em;
             font-weight: 400;
             }
         }
@@ -210,7 +210,7 @@ button, .btn{
             grid-column: 1;
             grid-row: 2;
             display: flex;
-            margin-top: 4.3em;
+            margin-top: 5.5em;
             
             .appstore-btn {
                 width: 11.25em;
@@ -246,10 +246,10 @@ button, .btn{
         .hero-phone {
             display: flex;
             grid-column: 2;
-            grid-row: 1/ span 2;
             margin-top: 10em;
-            margin-right: 35.7em;
-            
+            margin-bottom: -2.4em;
+            grid-row: 1/ span 2;
+            margin-right: 38.4em;
         }
     }
 }
